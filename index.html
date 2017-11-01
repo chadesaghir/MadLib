@@ -8,9 +8,9 @@
        <label>Mad Lib</label><br><br>
       
       <label>Noun</label>
-      <input type="text" ng-model="noun" placeholder="Enter a noun here">
+      <input type="text" ng-model="noun" placeholder="Enter a name here eg: Jack or Sam">
       <label>Adjective</label>
-      <input type="text" ng-model="adjective" placeholder="Enter a adjective here">
+      <input type="text" ng-model="adjective" placeholder="Enter eiter smart or dumb here">
       <input type="text" ng-model="smart" placeholder="Are you smart?">
       <input type="number" ng-model="number" placeholder="Number?">
       
@@ -25,11 +25,11 @@
       <span ng-if="!adjective">________</span><br><br>
       
       Therefore
-      {{noun}} is smart is {{ smart.toLowerCase() ==='yes' || adjective==='smart'}}<br><br>
+      <span ng-if="noun">{{noun}}</span>
+      <span ng-if="!noun">________</span>
+      is smart is {{ smart.toLowerCase() ==='yes' || adjective==='smart'}}<br><br>
       
       <span ng-if="number">{{number * number}}</span>
-      
-      
       
       </h1>
      
